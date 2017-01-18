@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css?family=Lekton:400,400i,700");
 /******** global reset ********/
 html {
   text-size-adjust: 100%;
@@ -8,6 +7,7 @@ html {
   margin: 0;
   padding: 0;
   border: 0;
+  box-sizing: border-box;
 }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
@@ -55,19 +55,6 @@ button, html input[type="button"], input[type="reset"], input[type="submit"] {
 button::-moz-focus-inner, input::-moz-focus-inner {
   border: 0;
   padding: 0;
-}
-
-input::-webkit-input-placeholder {
-  color: #727171;
-}
-
-::-webkit-input-placeholder {
-  color: #727171;
-}
-
-:-moz-placeholder {
-  /* Firefox 18- */
-  color: #727171;
 }
 
 select, textarea, input, button:focus {
@@ -124,19 +111,13 @@ q::before, q::after, blockquote::before, blockquote::after {
 
 body, html {
   font-size: 18px;
-  font-family: 'Lekton', sans-serif;
-  color: #111;
+  font-family: 'Helvetica', sans-serif;
+  color: #666;
   background-color: #f8f8f8;
   /*for Chrome browser in OSX better user experience*/
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   width: 100%;
-}
-
-@media (min-width: 960px) {
-  body {
-    margin-top: 50px;
-  }
 }
 
 /*::selection {background-color: $hightLight;}*/
@@ -145,13 +126,13 @@ a, button, input, textarea {
   transition: .3s;
   -weblit-transition: .3s;
   font-size: 16px;
-  font-family: 'Lekton', sans-serif;
+  font-family: 'Helvetica', sans-serif;
 }
 
 /*heading reset*/
 h1, h2, h3, h4, h5, h6 {
   font-size: 24px;
-  color: #111E25;
+  color: #171717;
   font-weight: normal;
 }
 
@@ -3101,6 +3082,216 @@ h1, h2, h3, h4, h5, h6 {
 .slideOutUp {
   -webkit-animation-name: slideOutUp;
   animation-name: slideOutUp;
+}
+
+.header {
+  width: 100%;
+  border-bottom: 1px solid #e6e6e6;
+  position: fixed;
+  top: 0;
+  background: #fff;
+  z-index: 3;
+}
+
+.header .hdr_panel {
+  max-width: 1080px;
+  margin: 0 auto;
+  height: 55px;
+  overflow: auto;
+}
+
+.hdr_panel .logo {
+  width: 100px;
+  float: left;
+  margin-left: 5px;
+  height: 100%;
+  line-height: 55px;
+  text-align: center;
+  font-size: 24px;
+  color: #171717;
+}
+
+.header + .slider {
+  width: 100%;
+  height: 600px;
+  max-width: 1080px;
+  margin: 58px auto 0;
+  position: relative;
+  border: 1px solid #e6e6e6;
+  overflow: hidden;
+}
+
+.slider > .arrow-right:before,
+.slider > .arrow-left:before {
+  content: '';
+  display: block;
+  position: absolute;
+  border-width: 25px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-color: rgba(205, 133, 63, 0.6);
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+}
+
+.slider .item {
+  position: absolute;
+  width: 100%;
+  height: 600px;
+}
+
+.slider > a {
+  position: absolute;
+  width: 65px;
+  height: 600px;
+  background: #fff;
+  opacity: 0;
+}
+
+.slider .arrow-right {
+  right: 0;
+}
+
+.slider .arrow-right:before {
+  border-right-width: 0;
+}
+
+.slider .arrow-left {
+  left: 0;
+}
+
+.slider .arrow-left:before {
+  border-left-width: 0;
+}
+
+.slider:hover > a {
+  opacity: .6;
+}
+
+@media (max-width: 960px) {
+  .slider {
+    height: 560px;
+  }
+  .slider .item, .slider > a {
+    height: 560px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header + .slider {
+    height: 480px;
+  }
+  .header + .slider .item, .header + .slider > a {
+    height: 480px;
+  }
+  .header + .slider > a {
+    width: 60px;
+    opacity: .6;
+  }
+}
+
+@media (max-width: 650px) {
+  .header + .slider {
+    height: 420px;
+  }
+  .header + .slider .item, .header + .slider > a {
+    height: 420px;
+  }
+  .header + .slider > a {
+    width: 55px;
+    opacity: .6;
+  }
+}
+
+@media (max-width: 560px) {
+  .header + .slider {
+    height: 360px;
+  }
+  .header + .slider .item, .header + .slider > a {
+    height: 360px;
+  }
+  .header + .slider > a {
+    width: 50px;
+    opacity: .6;
+  }
+}
+
+@media (max-width: 480px) {
+  .header + .slider {
+    height: 270px;
+  }
+  .header + .slider .item, .header + .slider > a {
+    height: 270px;
+  }
+  .header + .slider > a {
+    width: 40px;
+  }
+}
+
+.container {
+  max-width: 930px;
+  margin: 125px auto;
+  outline: 1px solid black;
+  position: relative;
+  background-color: #fff;
+  padding: 15px;
+}
+
+.container .product {
+  width: 95%;
+  height: auto;
+  margin: 0 auto 15px;
+  box-shadow: 0 0 0 1px black;
+  overflow: auto;
+}
+
+.product .product-photo {
+  width: 100%;
+  height: 100%;
+  display: block;
+  box-shadow: 0 0 0 1px black;
+}
+
+.product .description {
+  padding: 20px 5px;
+  font-size: 15px !important;
+  box-shadow: 0 0 0 1px black;
+}
+
+.product .sub-product {
+  width: 100%;
+  margin: 30px 0;
+}
+
+.sub-product > .sub-prod-list {
+  float: left;
+  width: 30%;
+  margin-left: 2.5%;
+  margin-bottom: 15px;
+  box-shadow: 0 0 0 1px black;
+}
+
+.sub-prod-list > .sub-prod-photo {
+  width: 100%;
+  display: block;
+  box-shadow: 0 0 0 1px black;
+}
+
+.sub-prod-list > .sub-desc {
+  padding: 15px 10px;
+  text-align: center;
+}
+
+@media (max-width: 960px) {
+  .container {
+    padding: 10px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

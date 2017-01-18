@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"script.js"}
+{"version":3,"sources":["../../../process/js/test.js"],"names":[],"mappings":";;;;;;;AAAA,IAAM,IAAI,SAAJ,CAAI,CAAC,GAAD;AAAA,SAAS,QAAQ,GAAR,CAAY,GAAZ,CAAT;AAAA,CAAV;;kBAEe,C","file":"script.js","sourcesContent":["const x = (num) => console.log(num)\n\nexport default x\n"]}

@@ -1,0 +1,28 @@
+.header {
+  width: 100%;
+  border-bottom: 1px solid $border;
+  position: fixed;
+  top: 0;
+  background: $bgContain;
+  z-index: 3;
+
+  .hdr_panel {
+    max-width: 1080px;
+    margin: 0 auto;
+    height: 55px;
+    overflow: auto;
+  }
+}
+
+.hdr_panel {
+  .logo {
+    width: 100px;
+    float: left;
+    margin-left: 5px;
+    height: 100%;
+    line-height: 55px;
+    text-align: center;
+    font-size: $lgFz;
+    color: $heading;
+  }
+}

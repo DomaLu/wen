@@ -1,6 +1,6 @@
 body, html {
   font-size: $mdFz;
-  font-family: 'Lekton', sans-serif;
+  font-family: 'Helvetica', sans-serif;
   color: $font;
   background-color: $bgBody;
   /*for Chrome browser in OSX better user experience*/
@@ -10,13 +10,6 @@ body, html {
   // height: 96%;
 }
 
-
-@media (min-width: 960px) {
-  body {
-    margin-top: 50px;
-  }
-}
-
 /*::selection {background-color: $hightLight;}*/
 /*::-moz-selection {background-color: $hightLight;}*/
 
@@ -24,7 +17,7 @@ a ,button, input, textarea {
   transition: .3s;
   -weblit-transition: .3s;
   font-size: $smFz;
-  font-family: 'Lekton', sans-serif;
+  font-family: 'Helvetica', sans-serif;
 }
 
 /*heading reset*/

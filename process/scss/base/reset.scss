@@ -5,7 +5,12 @@ html {
   text-size-adjust: 100%;
 }
 
-*{margin: 0;padding: 0; border: 0;}
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
 
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
@@ -34,20 +39,18 @@ button::-moz-focus-inner, input::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
-input::-webkit-input-placeholder {
-  color: $infoFont;
-}
-::-webkit-input-placeholder {
-  color: $infoFont;
-}
+// input::-webkit-input-placeholder {
+//   color: $infoFont;
+// }
+// ::-webkit-input-placeholder {
+//   color: $infoFont;
+// }
 
-:-moz-placeholder { /* Firefox 18- */
-  // color: $inActive;
-  color: $infoFont;
-}
+// :-moz-placeholder { /* Firefox 18- */
+  // color: $infoFont;
+// }
 
 // input::-moz-placeholder {  /* Firefox 19+ */
-//   // color: $inActive;
 //   color: $infoFont;
 // }
 
